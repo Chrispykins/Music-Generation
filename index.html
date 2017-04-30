@@ -1,0 +1,38 @@
+<html>
+  <head>
+  </head>
+  <body>
+	<div id='music'></div>
+	<input type='button' onclick='play();' value='Play!'></input>
+  </body>
+  
+  
+  <script type="text/javascript" src='abc.js'></script>
+  <script type="text/javascript" src='Base64Binary.js'></script>
+  <script type="text/javascript" src='midi.js'></script>
+  <script type="text/javascript" src='acoustic_grand_piano.js'></script>
+
+  <script type='text/javascript' id='midi_generation'>
+
+	MIDI.USE_XHR= false;
+
+	MIDI.loadPlugin({
+	  instrument: "acoustic_grand_piano",
+	  onsuccess: function () {
+	    MIDI.setVolume(0, 127);
+	  }
+	});
+  </script>
+
+  <script type="text/javascript" src='Util.js'></script>
+  <script type="text/javascript" src='ringBuffer.js'></script>
+  <script type="text/javascript" src='reference.js'></script>
+  
+  <script type="text/javascript" src='harmony.js'></script>
+  <script type="text/javascript" src='note.js'></script>
+  <script type="text/javascript" src='measure.js'></script>
+  <script type="text/javascript" src='composer.js'></script>
+
+  <script type="text/javascript" src='main.js'></script>
+
+</html>
